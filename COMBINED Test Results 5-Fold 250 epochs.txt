@@ -1,0 +1,99 @@
+59/59 [==============================] - 6s 13ms/step - loss: 0.4882 - accuracy: 0.8740
+1_Model evaluation:  [0.4881703555583954, 0.8739989399909973]    Now ACC: 87.4
+59/59 [==============================] - 2s 7ms/step
+              precision    recall  f1-score   support
+
+       Angry       0.87      0.89      0.88       275
+     Disgust       0.91      0.80      0.85       242
+        Fear       0.87      0.90      0.89       236
+       Happy       0.85      0.85      0.85       308
+     Neutral       0.94      0.99      0.96       244
+         Sad       0.85      0.87      0.86       278
+    Surprise       0.85      0.82      0.83       290
+
+    accuracy                           0.87      1873
+   macro avg       0.88      0.88      0.88      1873
+weighted avg       0.87      0.87      0.87      1873
+
+59/59 [==============================] - 2s 7ms/step
+Input Shape= (None, 178, 39)
+Temporal create succes!
+59/59 [==============================] - 3s 12ms/step - loss: 0.4476 - accuracy: 0.8799
+2_Model evaluation:  [0.44760385155677795, 0.8798718452453613]    Now ACC: 87.695
+59/59 [==============================] - 3s 11ms/step
+              precision    recall  f1-score   support
+
+       Angry       0.82      0.92      0.87       257
+     Disgust       0.89      0.79      0.84       246
+        Fear       0.91      0.87      0.89       224
+       Happy       0.90      0.84      0.87       328
+     Neutral       0.95      0.99      0.97       228
+         Sad       0.87      0.92      0.90       298
+    Surprise       0.84      0.85      0.85       292
+
+    accuracy                           0.88      1873
+   macro avg       0.88      0.88      0.88      1873
+weighted avg       0.88      0.88      0.88      1873
+
+59/59 [==============================] - 2s 8ms/step
+Input Shape= (None, 178, 39)
+Temporal create succes!
+59/59 [==============================] - 3s 11ms/step - loss: 0.4303 - accuracy: 0.8948
+3_Model evaluation:  [0.43031516671180725, 0.8948211669921875]    Now ACC: 88.29
+59/59 [==============================] - 2s 7ms/step
+              precision    recall  f1-score   support
+
+       Angry       0.89      0.89      0.89       295
+     Disgust       0.88      0.82      0.85       211
+        Fear       0.90      0.92      0.91       238
+       Happy       0.89      0.91      0.90       321
+     Neutral       0.93      0.98      0.95       241
+         Sad       0.93      0.85      0.89       281
+    Surprise       0.85      0.90      0.87       286
+
+    accuracy                           0.89      1873
+   macro avg       0.90      0.89      0.89      1873
+weighted avg       0.90      0.89      0.89      1873
+
+59/59 [==============================] - 2s 11ms/step
+Input Shape= (None, 178, 39)
+Temporal create succes!
+59/59 [==============================] - 3s 11ms/step - loss: 0.4441 - accuracy: 0.8884
+4_Model evaluation:  [0.44407472014427185, 0.8884143233299255]    Now ACC: 88.4275
+59/59 [==============================] - 2s 9ms/step
+              precision    recall  f1-score   support
+
+       Angry       0.88      0.91      0.89       306
+     Disgust       0.83      0.84      0.84       244
+        Fear       0.85      0.91      0.88       203
+       Happy       0.91      0.88      0.90       275
+     Neutral       0.97      0.99      0.98       255
+         Sad       0.87      0.86      0.87       280
+    Surprise       0.89      0.85      0.87       310
+
+    accuracy                           0.89      1873
+   macro avg       0.89      0.89      0.89      1873
+weighted avg       0.89      0.89      0.89      1873
+
+59/59 [==============================] - 2s 7ms/step
+Input Shape= (None, 178, 39)
+Temporal create succes!
+59/59 [==============================] - 3s 14ms/step - loss: 0.4328 - accuracy: 0.8846
+5_Model evaluation:  [0.43282216787338257, 0.8846153616905212]    Now ACC: 88.434
+59/59 [==============================] - 2s 9ms/step
+              precision    recall  f1-score   support
+
+       Angry       0.90      0.88      0.89       305
+     Disgust       0.82      0.80      0.81       189
+        Fear       0.93      0.90      0.91       231
+       Happy       0.86      0.88      0.87       312
+     Neutral       0.95      1.00      0.97       274
+         Sad       0.92      0.87      0.90       301
+    Surprise       0.80      0.84      0.82       260
+
+    accuracy                           0.88      1872
+   macro avg       0.88      0.88      0.88      1872
+weighted avg       0.89      0.88      0.88      1872
+
+59/59 [==============================] - 2s 7ms/step
+Average ACC: 0.8843443274497986

@@ -1,0 +1,15 @@
+python extract_feature.py --data_name BANGLA_SER --mean_signal_length 74348
+
+
+python main.py --mode train --data BANGLA_SER --split_fold 10 --random_seed 46 --epoch 500 --gpu 0
+
+python main.py --mode test --data BANGLA_SER  --test_path ./Models/BANGLA_SER_46_2023-09-24_01-21-56 --split_fold 10 --random_seed 46
+
+
+python extract_feature.py --data_name SUBESCO --mean_signal_length 88816
+
+python extract_feature.py --data_name COMBINED --mean_signal_length 90789
+
+python main.py --mode train --data COMBINED --split_fold 5 --random_seed 46 --epoch 250 --gpu 0
+
+python main.py --mode test --data COMBINED --test_path ./Models/COMBINED_46_2023-09-26_00-01-24 --split_fold 5 --random_seed 46
