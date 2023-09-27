@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Specify the folder containing the files
-folder_path = 'E:/University Courses/CSE400/project code/TIM-Net_SER/Code/BANSpEmo A Bangla Language Emotional Speech Recognition Dataset/BANSpEmo Dataset'
+folder_path = 'E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/BANSpEmo A Bangla Language Emotional Speech Recognition Dataset/BANSpEmo Dataset'
 
 # Specify the substring to look for in the file names
 substring_to_match = '_06'

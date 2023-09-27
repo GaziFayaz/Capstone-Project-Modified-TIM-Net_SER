@@ -70,7 +70,7 @@ class TIMNET_Model(Common_Model):
         self.multi_decision = TIMNET(nb_filters=39,
                                 kernel_size=2, 
                                 nb_stacks=1,
-                                dilations=8,
+                                dilations=10,
                                 dropout_rate=0.1,
                                 activation = "relu",
                                 return_sequences=True, 
@@ -83,6 +83,7 @@ class TIMNET_Model(Common_Model):
         self.model.compile(loss = "categorical_crossentropy",
                            optimizer =Adam(learning_rate=0.001, beta_1=0.93, beta_2=0.98, epsilon=1e-8),
                            metrics = ['accuracy'])
+        # self.model.summary()
         print("Temporal create succes!")
         
     def train(self, x, y):
@@ -179,8 +180,9 @@ class TIMNET_Model(Common_Model):
     
     def run_prediction(self, x, y):
         self.create_model()
-        weight_path="E:/University Courses/CSE400/project code/TIM-Net_SER/Code/Models/COMBINED_46_2023-09-26_00-01-24/5-fold_weights_best_3.hdf5"
+        weight_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/Test_Models/IEMOCAP_16/10-fold_weights_best_4.hdf5"
         self.model.load_weights(weight_path)
+        
         # best_eva_list = self.model.evaluate(x, y)
         # loss = best_eva_list[0]
         # accuracy = best_eva_list[1]
