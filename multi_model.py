@@ -13,18 +13,6 @@ text = "Just kind of feel numb, you know."
 timnet_res=run_model(file_path)
 tre_res = TRE(text)
 
-# p = Process(target=run_model, args=([file_path, timnet_res]))
-# q = Process(target=TRE, args=([text, tre_res]))
-
-# p.start()
-# q.start()
-
-# p.join()
-# q.join()
-
-# print(timnet_res)
-# print(tre_res)
-
 # Weighted Averaging
 accuracy_timnet = 0.7165
 accuracy_tre = 0.7394

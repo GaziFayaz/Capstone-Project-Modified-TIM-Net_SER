@@ -60,12 +60,6 @@ def run_model(file_path:str):
     # CLASS_LABELS = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
     CLASS_LABELS = ("angry", "happy", "neutral", "sad")
 
-    # print(extract_feature(file_path="E:/University Courses/CSE400/project code/TIM-Net_SER/Code/COMBINED/COMBINED/Angry/03-01-03-02-01-01-03.wav"))
-
-
-    # "./MFCC/COMBINED.npy"
-    # print(get_feature("E:/University Courses/CSE400/project code/TIM-Net_SER/Code/COMBINED/COMBINED/Angry/03-01-03-02-01-01-03.wav"))
-    # data = np.load("./MFCC/IEMOCAP.npy", allow_pickle=True).item()
     data = extract_feature(file_path=file_path)
     # print(data["x"].shape)
     x_source= data["x"]
@@ -73,12 +67,27 @@ def run_model(file_path:str):
 
     print(x_source.shape[1:])
     model = TIMNET_Model( input_shape=x_source.shape[1:], class_label= CLASS_LABELS)
-    loaded_model = model.run_prediction(x_source, y_source)
     print("Model Created")
-    pred = loaded_model.predict(x_source)        
+    loaded_model = model.run_prediction(x_source, y_source)
+    pred = loaded_model.predict(x_source)
+    print(pred[0])
+    # data = extract_feature(file_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/COMBINED/COMBINED/Disgust/F_01_OISHI_S_1_DISGUST_1.wav")
+    # x_source= data["x"]
+    # y_source = data["y"]
+    # pred = loaded_model.predict(x_source)
     # print(pred[0])
+    # data = extract_feature(file_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/COMBINED/COMBINED/Sad/03-01-02-01-01-01-23.wav")
+    # x_source= data["x"]
+    # y_source = data["y"]
+    # pred = loaded_model.predict(x_source)
+    # print(pred[0])
+
+
+
+        
+
     # timnet_res=pred[0] # timnet_res as the shared variable in multiprocess
-    return pred[0]
+    # return pred[0]
 
 
     # model.load_weights("E:/University Courses/CSE400/project code/TIM-Net_SER/Code/Models/COMBINED_46_2023-09-26_00-01-24/5-fold_weights_best_3.hdf5")
