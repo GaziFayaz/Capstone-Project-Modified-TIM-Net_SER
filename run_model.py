@@ -70,7 +70,8 @@ def run_model(file_path:str):
     print("Model Created")
     loaded_model = model.run_prediction(x_source, y_source)
     pred = loaded_model.predict(x_source)
-    print(pred[0])
+    # print(pred[0])
+    return pred[0]
     # data = extract_feature(file_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/COMBINED/COMBINED/Disgust/F_01_OISHI_S_1_DISGUST_1.wav")
     # x_source= data["x"]
     # y_source = data["y"]
@@ -81,13 +82,6 @@ def run_model(file_path:str):
     # y_source = data["y"]
     # pred = loaded_model.predict(x_source)
     # print(pred[0])
-
-
-
-        
-
-    # timnet_res=pred[0] # timnet_res as the shared variable in multiprocess
-    # return pred[0]
 
 
     # model.load_weights("E:/University Courses/CSE400/project code/TIM-Net_SER/Code/Models/COMBINED_46_2023-09-26_00-01-24/5-fold_weights_best_3.hdf5")

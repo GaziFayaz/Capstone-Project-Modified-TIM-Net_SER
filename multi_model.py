@@ -6,12 +6,20 @@ from multiprocessing import Process
 # if __name__ == "__main__":
 #     manager = multiprocessing.Manager()
 
-file_path = "E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/COMBINED/COMBINED/Disgust/F_01_OISHI_S_1_DISGUST_1.wav"
+file_path = "E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/IEMOCAP_full_release/Session1/sentences/wav/Ses01M_script01_1/Ses01M_script01_1_F043.wav"
+# file_path = "C:/Users/gazif/OneDrive/Documents/Sound Recordings/Recording.wav"
 
-text = "Just kind of feel numb, you know."
+text = "Well, I can see that."
+# text = "Isn't it a great day to be outside"
 
 timnet_res=run_model(file_path)
 tre_res = TRE(text)
+
+temp = tre_res[0]
+tre_res[0] = tre_res[3]
+tre_res[3] = tre_res[1]
+tre_res[1] = tre_res[2]
+tre_res[2] = temp
 
 # Weighted Averaging
 accuracy_timnet = 0.7165

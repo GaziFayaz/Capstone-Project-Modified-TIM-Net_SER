@@ -22,7 +22,7 @@ def TRE(text:str):
 
     best_model = torch.load("E:/University Courses/CSE400/project code/TRE/model_TRE.pt")
     # best_model.eval()
-    text = "Just kind of feel numb, you know."
+    # text = "Just kind of feel numb, you know."
 
     input_ids = torch.tensor(tokenizer.encode(text, add_special_tokens=True)).unsqueeze(0)
     with torch.no_grad():
@@ -37,3 +37,7 @@ def TRE(text:str):
     # print("Predicted label:", probabilities.tolist())
     # tre_res=(probabilities.tolist())[0]
     return (probabilities.tolist())[0]
+
+# print(TRE("You keep saying my flashlight like it's just yours."))
+print(["neutral", "sad", "happy", "angry"])
+print(TRE("What about me?"))
