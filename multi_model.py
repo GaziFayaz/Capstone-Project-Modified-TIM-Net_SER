@@ -1,10 +1,5 @@
-import multiprocessing
 from run_model import run_model # For TIM-Net
-from TRE import TRE 
-from multiprocessing import Process
-
-# if __name__ == "__main__":
-#     manager = multiprocessing.Manager()
+from TRE import TRE
 
 file_path = "E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/IEMOCAP_full_release/Session1/sentences/wav/Ses01M_script01_1/Ses01M_script01_1_F043.wav"
 # file_path = "C:/Users/gazif/OneDrive/Documents/Sound Recordings/Recording.wav"

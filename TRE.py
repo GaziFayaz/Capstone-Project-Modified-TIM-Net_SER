@@ -40,4 +40,4 @@ def TRE(text:str):
 
 # print(TRE("You keep saying my flashlight like it's just yours."))
 print(["neutral", "sad", "happy", "angry"])
-print(TRE("What about me?"))
+print(TRE("Isn't it a great day to be outside!"))

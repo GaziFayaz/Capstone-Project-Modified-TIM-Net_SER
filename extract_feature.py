@@ -117,8 +117,9 @@ IEMOCAP_LABEL = ("angry", "happy", "neutral", "sad")
 EMOVO_LABEL = ("angry", "disgust", "fear", "happy","neutral","sad","surprise")
 BANGLA_SER_LABEL = ("Happy", "Sad", "Angry", "Surprise", "Neutral")
 COMBINED_LABEL = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
-LABEL_DICT = {"CASIA":CASIA_LABEL,"EMODB":EMODB_LABEL,"IEMOCAP":IEMOCAP_LABEL,"EMOVO":EMOVO_LABEL,"SAVEE":SAVEE_LABEL,"RAVDE":RAVDE_LABEL, "BANGLA_SER": BANGLA_SER_LABEL, "COMBINED": COMBINED_LABEL}
-PATH_DICT = {"CASIA":"./CASIA_MFCC_88","EMODB":"./EMODB_MFCC_96","IEMOCAP":"./IEMOCAP_MFCC_310","EMOVO":"./EMOVO_MFCC_96","SAVEE":"./SAVEE_MFCC_130","RAVDE":"./RAVDE_MFCC_110", "BANGLA_SER": "./BANGLA_SER_MFCC_88", "COMBINED": "./COMBINED_MFCC_90"}
+COMBINED_NEW_LABEL = ("Angry", "Fear", "Happy", "Neutral", "Sad")
+LABEL_DICT = {"CASIA":CASIA_LABEL,"EMODB":EMODB_LABEL,"IEMOCAP":IEMOCAP_LABEL,"EMOVO":EMOVO_LABEL,"SAVEE":SAVEE_LABEL,"RAVDE":RAVDE_LABEL, "BANGLA_SER": BANGLA_SER_LABEL, "COMBINED": COMBINED_LABEL, "COMBINED_NEW": COMBINED_NEW_LABEL}
+PATH_DICT = {"CASIA":"./CASIA_MFCC_88","EMODB":"./EMODB_MFCC_96","IEMOCAP":"./IEMOCAP_MFCC_310","EMOVO":"./EMOVO_MFCC_96","SAVEE":"./SAVEE_MFCC_130","RAVDE":"./RAVDE_MFCC_110", "BANGLA_SER": "./BANGLA_SER_MFCC_88", "COMBINED": "./COMBINED_MFCC_90", "COMBINED_NEW": "./COMBINED_NEW_MFCC_90"}
 
 # First step: extract speech feature
 extract_feature(data_name=args.data_name, feature_type_="MFCC", mean_signal_length=args.mean_signal_length, class_labels=LABEL_DICT[args.data_name])
