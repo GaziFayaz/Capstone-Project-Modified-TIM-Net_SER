@@ -58,7 +58,7 @@ def extract_feature(file_path:str, feature_type_:str="MFCC", mean_signal_length:
 
 def run_model(file_path:str):
     # CLASS_LABELS = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
-    CLASS_LABELS = ("angry", "happy", "neutral", "sad")
+    CLASS_LABELS = ("Happy", "Sad", "Angry", "Surprise", "Neutral")
 
     data = extract_feature(file_path=file_path)
     # print(data["x"].shape)
@@ -70,7 +70,7 @@ def run_model(file_path:str):
     print("Model Created")
     loaded_model = model.run_prediction(x_source, y_source)
     pred = loaded_model.predict(x_source)
-    # print(pred[0])
+    print(pred[0])
     return pred[0]
     # data = extract_feature(file_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/COMBINED/COMBINED/Disgust/F_01_OISHI_S_1_DISGUST_1.wav")
     # x_source= data["x"]

@@ -110,7 +110,7 @@ class TIMNET_Model(Common_Model):
             if not os.path.exists(folder_address):
                 os.mkdir(folder_address)
             weight_path=folder_address+'/'+str(self.args.split_fold)+"-fold_weights_best_"+str(i)+".hdf5"
-            checkpoint = callbacks.ModelCheckpoint(weight_path, verbose=1, save_best_only=False)
+            checkpoint = callbacks.ModelCheckpoint(weight_path, save_weights_only=True, verbose=1, save_best_only=False)
             max_acc = 0
             best_eva_list = []
             h = self.model.fit(x[train], y_train,validation_data=(x[test],  y[test]),batch_size = self.args.batch_size, epochs = self.args.epoch, verbose=1,callbacks=[checkpoint])
@@ -181,7 +181,7 @@ class TIMNET_Model(Common_Model):
     
     def run_prediction(self, x, y):
         self.create_model()
-        weight_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/Test_Models/IEMOCAP_16/10-fold_weights_best_4.hdf5"
+        weight_path="E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/Models/COMBINED_NEW_46_2023-10-19_04-34-49/2-fold_weights_best_1.hdf5"
         self.model.load_weights(weight_path)
         
         # best_eva_list = self.model.evaluate(x, y)
