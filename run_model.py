@@ -58,7 +58,7 @@ def extract_feature(file_path:str, feature_type_:str="MFCC", mean_signal_length:
 
 def run_model(file_path:str):
     # CLASS_LABELS = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
-    CLASS_LABELS = ("Happy", "Sad", "Angry", "Surprise", "Neutral")
+    CLASS_LABELS = ("Angry", "Fear", "Happy", "Neutral", "Sad")
 
     data = extract_feature(file_path=file_path)
     # print(data["x"].shape)

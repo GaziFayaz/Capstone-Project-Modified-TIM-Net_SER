@@ -54,10 +54,10 @@ def softmax(x, axis=-1):
     return ex/K.sum(ex, axis=axis, keepdims=True)
 
 class TIMNET_Model(Common_Model):
-    # , args
-    def __init__(self, input_shape, class_label, **params):
+    # 
+    def __init__(self, args, input_shape, class_label, **params):
         super(TIMNET_Model,self).__init__(**params)
-        # self.args = args
+        self.args = args
         self.data_shape = input_shape
         self.num_classes = len(class_label)
         self.class_label = class_label
@@ -135,11 +135,13 @@ class TIMNET_Model(Common_Model):
             for j,l in enumerate(item):
                 temp[self.class_label[j]]=item[j]
             data1 = pd.DataFrame(temp)
-            data1.to_excel(writer,sheet_name=str(i), encoding='utf8')
+            # , encoding='utf8'
+            data1.to_excel(writer,sheet_name=str(i))
 
             df = pd.DataFrame(self.eva_matrix[i]).transpose()
-            df.to_excel(writer,sheet_name=str(i)+"_evaluate", encoding='utf8')
-        writer.save()
+            # , encoding='utf8'
+            df.to_excel(writer,sheet_name=str(i)+"_evaluate")
+        # writer.save()
         writer.close()
 
         K.clear_session()
