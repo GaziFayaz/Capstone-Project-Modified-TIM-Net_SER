@@ -54,10 +54,10 @@ def softmax(x, axis=-1):
     return ex/K.sum(ex, axis=axis, keepdims=True)
 
 class TIMNET_Model(Common_Model):
-    # 
-    def __init__(self, args, input_shape, class_label, **params):
+    #  ,args
+    def __init__(self, input_shape, class_label, **params): #  put args as parameter here for training model
         super(TIMNET_Model,self).__init__(**params)
-        self.args = args
+        # self.args = args  # de-comment out this line too for training
         self.data_shape = input_shape
         self.num_classes = len(class_label)
         self.class_label = class_label
