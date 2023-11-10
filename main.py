@@ -53,7 +53,8 @@ IEMOCAP_CLASS_LABELS = ("angry", "happy", "neutral", "sad")#iemocap
 EMOVO_CLASS_LABELS = ("angry", "disgust", "fear", "happy","neutral","sad","surprise")#emovo
 BANGLA_SER_CLASS_LABELS = ("Happy", "Sad", "Angry", "Surprise", "Neutral")
 COMBINED_CLASS_LABELS = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
-COMBINED_NEW_CLASS_LABELS = ("Angry", "Fear", "Happy", "Neutral", "Sad")
+COMBINED_NEW_CLASS_LABELS = ("Angry", "Fear", "Happy", "Neutral", "Sad"),
+SUBESCO_CLASS_LABELS = ("Angry", "Fear", "Happy", "Neutral", "Sad")
 CLASS_LABELS_dict = {"CASIA": CASIA_CLASS_LABELS,
                "EMODB": EMODB_CLASS_LABELS,
                "EMOVO": EMOVO_CLASS_LABELS,
@@ -62,7 +63,8 @@ CLASS_LABELS_dict = {"CASIA": CASIA_CLASS_LABELS,
                "SAVEE": SAVEE_CLASS_LABELS,
                "BANGLA_SER": BANGLA_SER_CLASS_LABELS,
                "COMBINED": COMBINED_CLASS_LABELS,
-               "COMBINED_NEW": COMBINED_NEW_CLASS_LABELS}
+               "COMBINED_NEW": COMBINED_NEW_CLASS_LABELS,
+               "SUBESCO": SUBESCO_CLASS_LABELS}
 
 data = np.load("./MFCC/"+args.data+".npy",allow_pickle=True).item()
 x_source = data["x"]

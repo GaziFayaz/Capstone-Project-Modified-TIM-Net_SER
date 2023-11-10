@@ -2,10 +2,10 @@ import os
 import shutil
 
 # Specify the folder containing the files
-folder_path = 'E:/University Courses/CSE400/project code/Capstone-Project-Modified-TIM-Net_SER/Code/BANSpEmo A Bangla Language Emotional Speech Recognition Dataset/BANSpEmo Dataset'
+folder_path = 'D:/University/CSE400/Capstone-Project-Modified-TIM-Net_SER/SUBESCO'
 
 # Specify the substring to look for in the file names
-substring_to_match = '_06'
+substring_to_match = 'SAD'
 
 # Create a dictionary to store file lists based on the substring
 file_lists = {}
@@ -21,7 +21,7 @@ for filename in os.listdir(folder_path):
         
         # Create the destination folder if it doesn't exist
         if not os.path.exists(destination_folder):
-            os.makedirs(destination_folder)
+            os.makedirs(destination_folder.capitalize())
         
         # Move the file to the destination folder
         shutil.move(file_path, os.path.join(destination_folder, filename))
