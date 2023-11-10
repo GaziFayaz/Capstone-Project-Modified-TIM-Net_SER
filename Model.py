@@ -183,7 +183,7 @@ class TIMNET_Model(Common_Model):
     
     def run_prediction(self, x, y):
         self.create_model()
-        weight_path="D:/University/CSE400/Capstone-Project-Modified-TIM-Net_SER/Models/SUBESCO_46_2023-11-09_23-40-24/10-fold_weights_best_2.hdf5"
+        weight_path="Models/SUBESCO_46_2023-11-09_23-40-24/10-fold_weights_best_2.hdf5"
         self.model.load_weights(weight_path)
         
         # best_eva_list = self.model.evaluate(x, y)
