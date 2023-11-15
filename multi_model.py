@@ -1,10 +1,11 @@
 from run_model import run_model # For TIM-Net
+import numpy as np
 # from TRE import TRE
 
 results = [] #for bulk test
 # angry, fear, happy, neutral, sad = 0
-for i in range(28):
-    file_path = f"sound recordings/ang_{i+1}.wav"
+for i in range(32):
+    file_path = f"sound recordings/sad_{i+1}.wav"
 
     text = "Well, I can see that."
 
@@ -27,5 +28,21 @@ for i in range(28):
     # for i in range(len(timnet_res)):
     #     multi_model_res.append((timnet_res[i]*weight_timnet) + (tre_res[i]*weight_tre))
     # print(multi_model_res)
-for i in range(28):
-    print(results[i])
+angry, fear, happy, neutral, sad = 0,0,0,0,0
+for i in range(32):
+    if np.array(results[i]).argmax() == 0:
+        angry+=1
+    elif np.array(results[i]).argmax() == 1:
+        fear+=1
+    elif np.array(results[i]).argmax() == 2:
+        happy+=1
+    elif np.array(results[i]).argmax() == 3:
+        neutral+=1
+    elif np.array(results[i]).argmax() == 4:
+        sad+=1
+    print(f"{i+1}: {results[i]}")
+print(f"angry: {angry}")
+print(f"fear: {fear}")
+print(f"happy: {happy}")
+print(f"neutral: {neutral}")
+print(f"sad: {sad}")
