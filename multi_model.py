@@ -4,12 +4,12 @@ import numpy as np
 
 results = [] #for bulk test
 # angry, fear, happy, neutral, sad = 0
-for i in range(32):
-    file_path = f"sound recordings/sad_{i+1}.wav"
+for i in range(10):
+    file_path = f"C:/Users/gazif/OneDrive/Documents/Sound Recordings/ang_{i+1}.wav"
 
     text = "Well, I can see that."
 
-    timnet_res=run_model(file_path)
+    timnet_res=run_model(file_path, 6)
     results.append(timnet_res) 
     # tre_res = TRE(text)
 
@@ -29,7 +29,7 @@ for i in range(32):
     #     multi_model_res.append((timnet_res[i]*weight_timnet) + (tre_res[i]*weight_tre))
     # print(multi_model_res)
 angry, fear, happy, neutral, sad = 0,0,0,0,0
-for i in range(32):
+for i in range(10):
     if np.array(results[i]).argmax() == 0:
         angry+=1
     elif np.array(results[i]).argmax() == 1:

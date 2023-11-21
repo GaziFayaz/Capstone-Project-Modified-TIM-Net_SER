@@ -56,7 +56,7 @@ def extract_feature(file_path:str, feature_type_:str="MFCC", mean_signal_length:
     return data
 
 
-def run_model(file_path:str):
+def run_model(file_path:str, model_num):
     # CLASS_LABELS = ("Angry", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise")
     CLASS_LABELS = ("Angry", "Fear", "Happy", "Neutral", "Sad")
 
@@ -68,7 +68,7 @@ def run_model(file_path:str):
     print(x_source.shape[1:])
     model = TIMNET_Model( input_shape=x_source.shape[1:], class_label= CLASS_LABELS)
     print("Model Created")
-    loaded_model = model.run_prediction(x_source, y_source)
+    loaded_model = model.run_prediction(x_source, y_source, model_num)
     pred = loaded_model.predict(x_source)
     print(pred[0])
     return pred[0]

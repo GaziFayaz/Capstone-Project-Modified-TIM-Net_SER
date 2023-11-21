@@ -181,9 +181,9 @@ class TIMNET_Model(Common_Model):
         self.acc = avg_accuracy/self.args.split_fold
         return x_feats, y_labels
     
-    def run_prediction(self, x, y):
+    def run_prediction(self, x, y, model_num):
         self.create_model()
-        weight_path="Models/SUBESCO_46_2023-11-09_23-40-24/10-fold_weights_best_2.hdf5"
+        weight_path=f"Models/COMBINED_NEW_46_2023-10-27_13-02-46/10-fold_weights_best_{model_num}.hdf5"
         self.model.load_weights(weight_path)
         
         # best_eva_list = self.model.evaluate(x, y)
