@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import multiprocessing
 from run_model import run_model  # For TIM-Net
 import numpy as np
