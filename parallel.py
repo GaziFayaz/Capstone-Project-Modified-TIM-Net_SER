@@ -76,6 +76,17 @@ if __name__ == "__main__":
     
     avg_result = [0, 0, 0, 0, 0] 
     for i in range(len(results)):   
+        print(f"model {i+1}: {results}")
+        if np.array(results).argmax() == 0:
+            print("angry")
+        elif np.array(results).argmax() == 1:
+            print("fear")
+        elif np.array(results).argmax() == 2:
+            print("happy")
+        elif np.array(results).argmax() == 3:
+            print("neutral")
+        elif np.array(results).argmax() == 4:
+            print("sad")
         for j in range(len(results[i])):
             avg_result[j] += results[i][j]
     for i in range(len(avg_result)):
